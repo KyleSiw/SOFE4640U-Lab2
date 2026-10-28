@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dbdbdb"
+    android:backgroundTint="#dbdbdb"
+    tools:context=".NewTask">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backButton"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+
+        android:ellipsize="end"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+
+        android:text=" "
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/back_arrow"
+
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="18dp"
+        app:iconTint="#000000"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#000000"
+        app:strokeWidth="1.5dp" />
+
+    <TextView
+        android:id="@+id/mainHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Task"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
+
+        />
+
+
+    <EditText
+        android:id="@+id/titleField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Title of your Recipe:"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mainHeader"
+
+        android:background="@drawable/rounded_outline"
+
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="6dp"
+
+        android:padding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/dateField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Deadline:"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleField"
+
+        android:background="@drawable/rounded_outline"
+
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="6dp"
+
+        android:padding="8dp"
+        />
+
+    <EditText
+        android:id="@+id/infoField"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/rounded_outline"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="Description:"
+        android:inputType="textMultiLine"
+        android:minLines="12"
+        android:padding="8dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@id/dateField"
+
+        app:layout_constraintWidth_percent="0.75" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/doneButton"
+        android:layout_width="60dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="25dp"
+
+        android:ellipsize="end"
+        android:insetLeft="0dp"
+        android:insetTop="0dp"
+        android:insetRight="0dp"
+        android:insetBottom="0dp"
+        android:padding="0dp"
+
+        android:text="Save"
+        android:textColor="#000000"
+
+        android:textStyle="bold"
+        app:backgroundTint="@android:color/transparent"
+        app:iconGravity="textStart"
+        app:iconPadding="0dp"
+        app:iconSize="18dp"
+        app:iconTint="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/infoField"
+        app:strokeColor="#000000"
+        app:strokeWidth="1.5dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
